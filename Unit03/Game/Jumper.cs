@@ -7,7 +7,10 @@ namespace Unit03.Game
     {
         private int lifePoints = 5;
         private int wordIndex = 0;
-
+        
+        /// <summary>
+        /// Asks user for a guess and verify's it's accuracy.
+        /// </summary>
         public void readUserInput(string keyword)
         {
             Guess check = new Guess();
@@ -26,21 +29,33 @@ namespace Unit03.Game
             }
         }
 
+        /// <summary>
+        /// Returns how many more attempts the user has.
+        /// </summary>
         public int getLifePoints()
         {
             return lifePoints;
         }
 
+        /// <summary>
+        /// Updates the lifepoint score for the next round.
+        /// </summary>
         public void setLifePoints(int life)
         {
             lifePoints = life;
         }
 
+        /// <summary>
+        /// Updates the word index for the next round.
+        /// </summary>
         public int getWordIndex()
         {
             return wordIndex;
         }
 
+        /// <summary>
+        /// Subtracts the lifepoint total if the user is incorrect. 
+        /// </summary>
         public void hitPoints(bool hit)
         {
             if (hit == false)

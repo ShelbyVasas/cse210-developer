@@ -6,11 +6,18 @@ namespace Unit03.Game
     public class Terminal
     {
        private List<char> word = new List<char> {'_','_','_','_','_'};
+
+        /// <summary>
+        /// Finds the location of the letter in the list.
+        /// </summary>
        public void setWordList(int loc, char letter)
        {
         word[loc] = letter;
        }
 
+        /// <summary>
+        /// Prints the letter if guessed correctly.
+        /// </summary>
        private void printWordList()
        {
         foreach(char letters in word)
@@ -19,17 +26,26 @@ namespace Unit03.Game
         }
        }
 
+        /// <summary>
+        /// Adds their guess to the game.
+        /// </summary>
        public string getCharList()
        {
         string charTotal = String.Join("",word);
         return charTotal;
        }
 
+        /// <summary>
+        /// Shows user if they won!
+        /// </summary>
        public void winDisplay()
        {
         Console.WriteLine("You win!");
        }
 
+        /// <summary>
+        /// Displays the image of the jumper to the user. 
+        /// </summary>
        public void displayPerson(int lifePoints)
        {
         switch(lifePoints)

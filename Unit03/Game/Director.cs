@@ -3,6 +3,12 @@ using System.Collections.Generic;
 
 namespace Unit03.Game
 {
+    /// <summary>
+    /// <para>A person who directs the game.</para>
+    /// <para>
+    /// The responsibility of a Director is to control the sequence of play.
+    /// </para>
+    /// </summary>
     public class Director
     {
         public void playGame()
@@ -11,6 +17,10 @@ namespace Unit03.Game
             Guess guess = new Guess();
             Terminal terminal = new Terminal();
             string keyword = "";
+
+            /// <summary>
+            /// Verifys that the game is still active because the user has not died yet.
+            /// </summary>
             keyword = guess.selectRandomWord();
                 while(jumper.getLifePoints() >= 0)
                 {
@@ -36,7 +46,9 @@ namespace Unit03.Game
                         }
                     }
                 }
-
+            /// <sumary>
+            /// Continues gameplay if user desires.
+            /// </summary>
             Console.WriteLine("Do you want to play again? [y/n]");
             string input = Console.ReadLine();
             if (input == "y")

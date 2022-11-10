@@ -12,6 +12,9 @@ namespace Unit03.Game
             return selectedWord;
         }
 
+        /// <summary>
+        /// Chooses a random word for the gameplay.
+        /// </summary>
         public string selectRandomWord()
         {
             List<string> words = new List<string>{
@@ -29,12 +32,17 @@ namespace Unit03.Game
             int index = random.Next(words.Count);
             return setSelectedWord(words[index]);
         }
-
+        /// <summary>
+        /// Returns the selected word for gameplay
+        /// </summary>
         public void getSelectedWord()
         {
             Console.WriteLine(selectedWord);
         }
 
+        /// <summary>
+        /// Checks to see if the user's guess matches as value in the chosen word.
+        /// </summary>
         public bool checkUserInput(char userInput, string selectedWord)
         {
             if (selectedWord.Contains(userInput))

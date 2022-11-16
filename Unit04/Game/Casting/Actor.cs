@@ -15,31 +15,37 @@ namespace Unit04.Game.Casting
         {
         }
 
+        //returns a color
         public Color GetColor()
         {
             return _color;
         }
 
+        //returns a text size
         public int GetFontSize()
         {
             return _fontSize;
         }
 
+        //returns a position
         public Point GetPosition()
         {
             return _position;
         }
 
+        //returns a text value
         public string GetText()
         {
             return _text;
         }
 
+        //returns a velocity
         public Point GetVelocity()
         {
             return _velocity;
         }
 
+        //moves the object across the screen
         public void MoveNext(int maxX, int MaxY)
         {
             int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
@@ -47,6 +53,7 @@ namespace Unit04.Game.Casting
             _position = new Point(x,y);
         }
 
+        //sets a color
         public void SetColor(Color color)
         {
             if (color == null)
@@ -56,6 +63,7 @@ namespace Unit04.Game.Casting
             this._color = color;
         }
 
+        //sets the font size
         public void SetFontSize(int fontSize)
         {
             if (fontSize <= 0)
@@ -65,6 +73,7 @@ namespace Unit04.Game.Casting
             this._fontSize = fontSize;
         }
 
+        //sets the position
         public void SetPosition(Point position)
         {
             if (position == null)
@@ -74,6 +83,7 @@ namespace Unit04.Game.Casting
             this._position = position;
         }
 
+        //sets the text
         public void SetText(string text)
         {
             if (text == null)
@@ -83,6 +93,7 @@ namespace Unit04.Game.Casting
             this._text = text;
         }
 
+        //sets the velocity
         public void SetVelocity(Point velocity)
         {
             if (velocity == null)

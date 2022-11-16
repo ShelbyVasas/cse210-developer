@@ -17,21 +17,25 @@ namespace Unit04.Game.Casting
             this._blue = blue;
         }
 
+        //returns the base color (white)
         public int GetAlpha()
         {
             return _alpha;
         }
 
+        //returns the value of red
         public int GetRed()
         {
             return _red;
         }
 
+        //returns the value of green 
         public int GetGreen()
         {
             return _green;
         }
 
+        //returns the value of blue
         public int GetBlue()
         {
             return _blue;

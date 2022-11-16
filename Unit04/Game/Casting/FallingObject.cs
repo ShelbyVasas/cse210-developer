@@ -1,5 +1,6 @@
 namespace Unit04.Game.Casting
 {
+    //purpose is to hold a point value
     public class FallingObject : Actor
     {
         private int pointVal;
@@ -7,6 +8,8 @@ namespace Unit04.Game.Casting
         {
             pointVal = points;
         }
+
+        //returns a point value
         public int getPoints()
         {
             return pointVal;
